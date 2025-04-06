@@ -4,7 +4,7 @@
 .NET Aspire is a cloud-ready stack and set of tools, templates, and NuGet packages designed to simplify the development of observable, production-ready, and distributed applications, particularly those with cloud-native architectures. 
 
 <b>Purpose:</b><br/>
-.NET Aspire aims to make it easier for developers to build and manage complex, distributed applications by providing a streamlined approach to common cloud-native challenges. 
+.NET Aspire aims to make it easier for developers to build and manage complex, distributed applications by providing a streamlined approach to common cloud-native challenges. <br/>
 <b>Key Features:</b><br/>
 * Orchestration: Simplifies the configuration and interconnection of application components, including databases, messaging systems, and caching services. 
 * Components: Offers NuGet packages for integrating with various cloud services, providing standardized configurations and automatic injection for efficient service communication. 
