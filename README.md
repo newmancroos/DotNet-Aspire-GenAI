@@ -11,6 +11,7 @@
 * Tooling: Includes Visual Studio and .NET CLI integrations with standardized project templates and pre-configured components, streamlining development and scaling. 
 * Cloud-Native Focus: Designed to support the creation of production-ready, observable distributed applications, leveraging microservices architecture. 
 * Integrations: Provides integrations for common cloud services, such as databases, messaging systems, and caching services, packaged into NuGet packages. <br />
+
 <b>Benefits:</b><br />
 * Simplified Development: Streamlines the development of cloud-native applications by leveraging microservices architecture. 
 * Improved Observability: Enables easier monitoring and debugging of distributed applications. 
