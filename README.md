@@ -1,6 +1,10 @@
 # DotNet-Aspire-GenAI
 
 ## .NET Aspire
+
+### What is .NET Aspire?
+Cloud-native development framework built on top of .NET platform to streamline and standardize the process of creating distrubuted, microservices-based apps.
+
 .NET Aspire is a cloud-ready stack and set of tools, templates, and NuGet packages designed to simplify the development of observable, production-ready, and distributed applications, particularly those with cloud-native architectures. 
 
 <b>Purpose:</b><br/>
