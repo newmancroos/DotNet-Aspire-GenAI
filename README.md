@@ -3,7 +3,12 @@
 ## .NET Aspire
 
 ### What is .NET Aspire?
-Cloud-native development framework built on top of .NET platform to streamline and standardize the process of creating distrubuted, microservices-based apps.
+- Cloud-native development framework built on top of .NET platform to streamline and standardize the process of creating distrubuted, microservices-based apps.
+- It's adding scaffolding, orachestration and preconfigured integrations for common cloud-backed sevices.
+- Collection of templates, libraries that simplify the process of building microservices and orchestrating them in containerized environments.
+
+![image](https://github.com/user-attachments/assets/0cd41ef6-d538-4bf5-845f-c8e5b89fee55)
+
 
 .NET Aspire is a cloud-ready stack and set of tools, templates, and NuGet packages designed to simplify the development of observable, production-ready, and distributed applications, particularly those with cloud-native architectures. 
 
