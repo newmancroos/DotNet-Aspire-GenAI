@@ -59,5 +59,21 @@
    If a microservice needs to wait for a database to spin up, Aspire can coordinate that. <br/>
 - <b>Scalable Infrastructure</b><br/>
   Strightforward to scale indivitual microservices, whether your're using Docker, Kubernetes or ACA, Aspire manges the foundational scripts and tooling<br/>
-  
+
+
+### Integration in .NET Aspire
+- <b>Build-in Connectors</b> <br/>
+   Prebuild integrations with common cloud and on-premises services, such as databases (PostgreSQL, MongoDB), Caches (Redis), Message brockers (RabbitMQ, Azure Service Bus) and Identity Providers (Keycloak) without any boiler plate code.<br/>
+- <b> Cross-Cutting Feature</b><br/>
+   Provides default setups for logging, monitoring and telemetry, saving time and promoting consistent patterns across different microservices.<br/>
+- <b>Modular & Extensible</b> <br/>
+   Adding a new service like AI-based feature or a vector database requires minimal adjustments, thanks to Aspire's pluggable design<br/>
+
+### Service Discovery in .NET Aspire
+- <b>Dynamic Routing</b><br/>
+  Service end-points can change dynamically, for instance, when scaling up or down, keep tracking of microservices locations, avoiding the need for hard-coded URLs or IP addresses<br/>
+- <b>Automatic Registrations</b><br/>
+  When each microservice starts, it registers itself in Aspire's service registry (or a backing service registry), making it discoverable to other services.
+- <b>Resilience & Scaling</b><br/>
+  Service discover also enables Load balancing and fail over, If one instance of a service becomes unavailable, calls are routed to another instance automatically, increase resiliency and ensureing uninterrupted service
     
