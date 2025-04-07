@@ -17,3 +17,14 @@
 * Improved Observability: Enables easier monitoring and debugging of distributed applications. 
 * Enhanced Productivity: Provides tools and templates to accelerate the development process. 
 * Focus on Code: Allows developers to focus on application logic rather than infrastructure complexities. 
+
+### What is Distributed Architecture?
+* Functionality is spread across multiple independent services that communicate over a network
+* Each services can be developed, deployed and scaled independently
+* If one service fails, others can continue oerating, reducing system-wide downtime
+* Services handling heavy loads can be scaled up (or down) without affecting others
+
+### Cloud-Native Distributed Architecture
+
+![image](https://github.com/user-attachments/assets/a9fbc351-90fd-4841-b1e6-aca0ea9aec8e)
+
