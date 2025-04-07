@@ -41,3 +41,23 @@
 
 
 ## .NET Aspire - Distributed App Development Framework
+
+* .NET Aspire concepts:
+     - Orchestration
+     - Integration
+     - Service Discovery
+
+![image](https://github.com/user-attachments/assets/158a0521-0670-4ba5-b5ba-f3bfd406d329)
+
+
+### Orchestration
+- <b>Automating Container management</b></br>
+   Automate container-based deployment without requireing manual dockerfiles or complex docker-compose setups for each microservices <br/>
+- <b>Environment Awareness</b><br/>
+   Uses environment configuration (local, test, production) to decide what services to start and how to configure them. <br/>
+- <b>Service Dependencies</b><br/>
+   If a microservice needs to wait for a database to spin up, Aspire can coordinate that. <br/>
+- <b>Scalable Infrastructure</b><br/>
+  Strightforward to scale indivitual microservices, whether your're using Docker, Kubernetes or ACA, Aspire manges the foundational scripts and tooling<br/>
+  
+    
