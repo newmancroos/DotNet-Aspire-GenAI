@@ -77,3 +77,21 @@
 - <b>Resilience & Scaling</b><br/>
   Service discover also enables Load balancing and fail over, If one instance of a service becomes unavailable, calls are routed to another instance automatically, increase resiliency and ensureing uninterrupted service
     
+## Terms of Orchestration in .NET Aspire
+
+<b>App Model : </b> The heart of your distributed application <br/>
+<b>App Host / Orchestrator : </b> Project responsible for running all resources <br/>
+<b>Resoiurces : </b> Any piece of you app (database, Microsevices, Containers) <br/>
+<b> Integration : </b> NuGet packages that model or configure services <br/>
+<b>Reference : </b> Declares dependencies between resources <br/>
+
+![image](https://github.com/user-attachments/assets/633fd3a2-8834-4d1f-b94b-3b49c8ded288)
+
+![image](https://github.com/user-attachments/assets/ce8f8599-df3f-4852-8bba-7f17f3f4646f)
+
+
+![image](https://github.com/user-attachments/assets/60391bbc-86ed-45db-a493-b5c97f2aa262)
+
+
+
+
