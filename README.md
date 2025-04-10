@@ -96,5 +96,18 @@
 ![image](https://github.com/user-attachments/assets/0df72725-e95a-49fb-b546-91f4fad75c30)
 
 
+### Service Discovery
+
+- Discovering service without hardcoding the service path.
+- ex.
+   ![image](https://github.com/user-attachments/assets/229bcc01-cf48-436c-871f-3241af2b2cda)
+
+
+  <br/>There are different resource types.:
+
+  ![image](https://github.com/user-attachments/assets/30417bd3-f80a-4711-a17f-71c4b1213992)
+  
+
+  
 
 
