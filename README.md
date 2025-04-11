@@ -114,3 +114,12 @@
 ![image](https://github.com/user-attachments/assets/b4e5bf38-8c1c-41a9-a508-0ea63ef4ae04)
 
 
+## How does Hosting integration and Client Integration works?
+
+We install Aspire.Hosting packages and regester in the Aspire hosting project. Since Each projects refer Aspire host, Host inject the environment variable to the service project.
+In Service side we need to install relevent Aspire packages, so it uses the environment variable injected by Aspire host and started working.
+
+![image](https://github.com/user-attachments/assets/9bebec35-646d-40e3-985c-0abad8be0821)
+
+
+
