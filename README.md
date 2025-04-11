@@ -122,4 +122,13 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
 ![image](https://github.com/user-attachments/assets/9bebec35-646d-40e3-985c-0abad8be0821)
 
 
+## How hosting side regestration work?
+
+
+![image](https://github.com/user-attachments/assets/a8f666b8-181d-48fc-b1d2-25b7cf6e13bb)
+
+- Once we install Aspire.Host.Postgres Nuget packager. We created a container with PGAdmin and Named it "postgres"
+- Created a connection to the postgres database which in container
+- Inject database connection environment config to the project
+
 
