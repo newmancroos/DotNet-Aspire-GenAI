@@ -132,3 +132,6 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
 - Inject database connection environment config to the project
 
 
+![image](https://github.com/user-attachments/assets/62ee5d33-fc53-4399-8897-6fec91aa5a16)
+
+
