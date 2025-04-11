@@ -135,3 +135,5 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
 ![image](https://github.com/user-attachments/assets/62ee5d33-fc53-4399-8897-6fec91aa5a16)
 
 
+* After install and configure Aspire.Host packages now we need to install Aspire clien packages in the service ans configure that to read injected Environment variable for PostgresD database.
+* 
