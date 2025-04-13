@@ -141,5 +141,48 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
 * Add products in the url so the url looks like https://localhost:7063/products here products is the endpoint root.
 
   ![image](https://github.com/user-attachments/assets/be7eac9e-e3d5-40c0-a42d-be7ba623b187)
-  
 
+  ### Catalog.http file content
+<pre>
+     @Catalog_HostAddress = https://localhost:7063/products
+
+GET {{Catalog_HostAddress}}/
+Accept: application/json
+
+###
+
+
+GET {{Catalog_HostAddress}}/1
+Accept: application/json
+
+###
+
+
+POST {{Catalog_HostAddress}}/
+Content-Type: application/json
+{
+    "id": 10,
+    "name": "NEW Swn Flashlight",
+    "description": "A NEW swn product for outdoor enthusiasts",
+    "price": 59.99,
+    "imageUrl": "product10.png"
+}
+
+###
+
+
+PUT {{Catalog_HostAddress}}/10
+Content-Type: application/json
+{    
+    "name": "UPDATED Swn Flashlight",
+    "description": "An UPDATED swn product for outdoor enthusiasts",
+    "price": 19.99,
+    "imageUrl": "product10.png"
+}
+
+###
+
+
+DELETE {{Catalog_HostAddress}}/10
+Accept: application/json
+</pre>
