@@ -186,3 +186,9 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
      DELETE {{Catalog_HostAddress}}/10
      Accept: application/json
 </pre>
+
+### by arranging Catalog.http  we can easiy debug the application while running by hitting the Send resuest button as shown below
+
+
+![image](https://github.com/user-attachments/assets/5264754c-42fe-4847-a2e4-0de0c5724f94)
+
