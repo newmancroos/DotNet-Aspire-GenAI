@@ -114,3 +114,81 @@
 ![image](https://github.com/user-attachments/assets/b4e5bf38-8c1c-41a9-a508-0ea63ef4ae04)
 
 
+## How does Hosting integration and Client Integration works?
+
+We install Aspire.Hosting packages and regester in the Aspire hosting project. Since Each projects refer Aspire host, Host inject the environment variable to the service project.
+In Service side we need to install relevent Aspire packages, so it uses the environment variable injected by Aspire host and started working.
+
+![image](https://github.com/user-attachments/assets/9bebec35-646d-40e3-985c-0abad8be0821)
+
+
+## How hosting side regestration work?
+
+
+![image](https://github.com/user-attachments/assets/a8f666b8-181d-48fc-b1d2-25b7cf6e13bb)
+
+- Once we install Aspire.Host.Postgres Nuget packager. We created a container with PGAdmin and Named it "postgres"
+- Created a connection to the postgres database which in container
+- Inject database connection environment config to the project
+
+
+![image](https://github.com/user-attachments/assets/62ee5d33-fc53-4399-8897-6fec91aa5a16)
+
+
+* After install and configure Aspire.Host packages now we need to install Aspire clien packages in the service ans configure that to read injected Environment variable for PostgresD database.
+* Then we can configure aspire host project progam.cs to configure postgres and api service.
+* Run the solution as AppHost as startup project and copy catalog service https url and replce it in the catalog project catalog.http file
+* Add products in the url so the url looks like https://localhost:7063/products here products is the endpoint root.
+
+  ![image](https://github.com/user-attachments/assets/be7eac9e-e3d5-40c0-a42d-be7ba623b187)
+
+  ### Catalog.http file content
+<pre>
+     @Catalog_HostAddress = https://localhost:7063/products
+     
+     GET {{Catalog_HostAddress}}/
+     Accept: application/json
+     
+     ###
+     
+     
+     GET {{Catalog_HostAddress}}/1
+     Accept: application/json
+     
+     ###
+     
+     
+     POST {{Catalog_HostAddress}}/
+     Content-Type: application/json
+     {
+         "id": 10,
+         "name": "NEW Swn Flashlight",
+         "description": "A NEW swn product for outdoor enthusiasts",
+         "price": 59.99,
+         "imageUrl": "product10.png"
+     }
+     
+     ###
+     
+     
+     PUT {{Catalog_HostAddress}}/10
+     Content-Type: application/json
+     {    
+         "name": "UPDATED Swn Flashlight",
+         "description": "An UPDATED swn product for outdoor enthusiasts",
+         "price": 19.99,
+         "imageUrl": "product10.png"
+     }
+     
+     ###
+     
+     
+     DELETE {{Catalog_HostAddress}}/10
+     Accept: application/json
+</pre>
+
+### by arranging Catalog.http  we can easiy debug the application while running by hitting the Send resuest button as shown below
+
+
+![image](https://github.com/user-attachments/assets/5264754c-42fe-4847-a2e4-0de0c5724f94)
+
