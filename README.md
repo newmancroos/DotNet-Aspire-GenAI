@@ -145,44 +145,44 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
   ### Catalog.http file content
 <pre>
      @Catalog_HostAddress = https://localhost:7063/products
-
-GET {{Catalog_HostAddress}}/
-Accept: application/json
-
-###
-
-
-GET {{Catalog_HostAddress}}/1
-Accept: application/json
-
-###
-
-
-POST {{Catalog_HostAddress}}/
-Content-Type: application/json
-{
-    "id": 10,
-    "name": "NEW Swn Flashlight",
-    "description": "A NEW swn product for outdoor enthusiasts",
-    "price": 59.99,
-    "imageUrl": "product10.png"
-}
-
-###
-
-
-PUT {{Catalog_HostAddress}}/10
-Content-Type: application/json
-{    
-    "name": "UPDATED Swn Flashlight",
-    "description": "An UPDATED swn product for outdoor enthusiasts",
-    "price": 19.99,
-    "imageUrl": "product10.png"
-}
-
-###
-
-
-DELETE {{Catalog_HostAddress}}/10
-Accept: application/json
+     
+     GET {{Catalog_HostAddress}}/
+     Accept: application/json
+     
+     ###
+     
+     
+     GET {{Catalog_HostAddress}}/1
+     Accept: application/json
+     
+     ###
+     
+     
+     POST {{Catalog_HostAddress}}/
+     Content-Type: application/json
+     {
+         "id": 10,
+         "name": "NEW Swn Flashlight",
+         "description": "A NEW swn product for outdoor enthusiasts",
+         "price": 59.99,
+         "imageUrl": "product10.png"
+     }
+     
+     ###
+     
+     
+     PUT {{Catalog_HostAddress}}/10
+     Content-Type: application/json
+     {    
+         "name": "UPDATED Swn Flashlight",
+         "description": "An UPDATED swn product for outdoor enthusiasts",
+         "price": 19.99,
+         "imageUrl": "product10.png"
+     }
+     
+     ###
+     
+     
+     DELETE {{Catalog_HostAddress}}/10
+     Accept: application/json
 </pre>
