@@ -136,4 +136,5 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
 
 
 * After install and configure Aspire.Host packages now we need to install Aspire clien packages in the service ans configure that to read injected Environment variable for PostgresD database.
-* 
+* Then we can configure aspire host project progam.cs to configure postgres and api service.
+* Run the solution as AppHost as startup project and copy catalog service https url and replce it in the catalog project catalog.http file
