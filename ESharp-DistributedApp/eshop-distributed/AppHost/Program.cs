@@ -37,6 +37,7 @@ var catalog = builder
 builder
     .AddProject<Projects.Basket>("basket")
     .WithReference(cache)
+    .WithReference(catalog)
     .WaitFor(cache);
 
 // This will inject environment variable to the service (here it is catalog) with the connection string to the database we created above.
