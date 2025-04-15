@@ -192,3 +192,11 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
 
 ![image](https://github.com/user-attachments/assets/5264754c-42fe-4847-a2e4-0de0c5724f94)
 
+
+
+## Calling http call from Basket Api to Catalog api via http call using Asp.Net Aspire <b>Service Discovery</b> feature without hard coding the service url
+
+![image](https://github.com/user-attachments/assets/b2645ec7-89f9-4aa8-bbb0-082f040a7813)
+
+- With resource like Redis cache, database, .NEt aspire inject the environment variable with resource path. but with Service reference .Net aspire inject the service Url to the destination services. <br/>
+
