@@ -34,8 +34,15 @@ Content-Type: application/json
     "imageUrl": "product10.png"
 }
 
+### Update Price
+PUT {{Catalog_HostAddress}}/1
+Content-Type: application/json
+{    
+    "name": "Solar Powered Flashlight",
+    "description": "An UPDATED swn product for outdoor enthusiasts",
+    "price": 5.99,
+    "imageUrl": "product1.png"
+}
 ###
-
-
 DELETE {{Catalog_HostAddress}}/10
 Accept: application/json

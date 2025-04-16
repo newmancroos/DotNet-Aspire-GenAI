@@ -17,28 +17,37 @@ var cache = builder
     .WithDataVolume()
     .WithLifetime(ContainerLifetime.Persistent);
 
+
 var catalogDb = postgres.AddDatabase("catalogdb");
 // This will not create database in the postgres container.
 // We need to create it manually but it will be a connection string to the database we created above.
 
 
+var rabbitmq = builder
+    .AddRabbitMQ("rabbitmq")
+    .WithManagementPlugin()
+    .WithDataVolume()
+    .WithLifetime(ContainerLifetime.Persistent);
 
 //Projects
 var catalog = builder
     .AddProject<Projects.Catalog>("catalog")
     .WithReference(catalogDb)
-    .WaitFor(catalogDb);
+    .WithReference(rabbitmq)
+    .WaitFor(catalogDb)
+    .WaitFor(rabbitmq);
 
 // This will inject environment variable to the service (here it is catalog) with the connection string to the database we created above.
 
 // Add projects and cloud-native backing services here
 
-
 builder
     .AddProject<Projects.Basket>("basket")
     .WithReference(cache)
     .WithReference(catalog)
-    .WaitFor(cache);
+    .WithReference(rabbitmq)
+    .WaitFor(cache)
+    .WaitFor(rabbitmq);
 
 // This will inject environment variable to the service (here it is catalog) with the connection string to the database we created above.
 
