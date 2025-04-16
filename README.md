@@ -234,3 +234,5 @@ Keycloak supports various social login providers and user federation options, ma
 
 ![image](https://github.com/user-attachments/assets/d86056c8-8be6-40a1-9214-dd9b6de656d4)
 
+![image](https://github.com/user-attachments/assets/70f474f4-4fbb-475a-b4ed-98e98bf4f164)
+
