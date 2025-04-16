@@ -200,33 +200,33 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
 
 - With resource like Redis cache, database, .NEt aspire inject the environment variable with resource path. but with Service reference .Net aspire inject the service Url to the destination services. <br/>
 
-### Securing microservice using KeyClock
+## Securing microservice using KeyClock
 Keycloak is an open-source Identity and Access Management (IAM) solution that provides authentication and authorization services for ASP.NET Core applications. It acts as an identity provider, allowing users to log in, manage their accounts, and access resources in your application. Keycloak is particularly useful for scenarios where you need single sign-on (SSO) and want to leverage the capabilities of OAuth 2.0 and OpenID Connect protocols. 
 
-## Authentication:
+### Authentication:
 Keycloak handles verifying user identities, ensuring that only authorized users can access your application. 
 
-## Authorization:
+### Authorization:
 Keycloak enforces access control, determining which users have permission to access specific resources or functionalities within your application. 
 
-## Single Sign-On (SSO):
+### Single Sign-On (SSO):
 Users can log in once and access multiple applications using the same credentials, thanks to Keycloak's SSO capabilities. 
 
-## Identity Management:
+### Identity Management:
 Keycloak provides tools for managing users, roles, groups, and other identity-related aspects of your application. 
 
-##OpenID Connect and OAuth 2.0 Compliant:
+### OpenID Connect and OAuth 2.0 Compliant:
 Keycloak is built on these popular protocols, making it easy to integrate with many modern web applications. 
 
-## <b>Benefits of Using Keycloak in ASP.NET Core:</b>
-## Simplified Security:
+### <u>Benefits of Using Keycloak in ASP.NET Core:</u>
+### Simplified Security:
 By offloading authentication and authorization, you can focus on developing your application's core features, rather than managing security complexities. 
 
-## Scalability and Robustness:
+### Scalability and Robustness:
 Keycloak is a mature and robust solution, capable of handling large numbers of users and applications. 
 
-## Centralized Management:
+### Centralized Management:
 Keycloak provides a central admin console for managing users, roles, and configurations for all of your applications. 
 
-## Social Login and User Federation:
+### Social Login and User Federation:
 Keycloak supports various social login providers and user federation options, making it easier for users to log in and manage their accounts. 
