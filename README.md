@@ -231,3 +231,6 @@ Keycloak provides a central admin console for managing users, roles, and configu
 
 ### Social Login and User Federation:
 Keycloak supports various social login providers and user federation options, making it easier for users to log in and manage their accounts. 
+
+![image](https://github.com/user-attachments/assets/d86056c8-8be6-40a1-9214-dd9b6de656d4)
+
