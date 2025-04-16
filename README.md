@@ -217,8 +217,9 @@ Keycloak provides tools for managing users, roles, groups, and other identity-re
 
 ### OpenID Connect and OAuth 2.0 Compliant:
 Keycloak is built on these popular protocols, making it easy to integrate with many modern web applications. 
-
+<br/><br/>
 ### <u>Benefits of Using Keycloak in ASP.NET Core:</u>
+
 ### Simplified Security:
 By offloading authentication and authorization, you can focus on developing your application's core features, rather than managing security complexities. 
 
