@@ -270,4 +270,4 @@ Now we can get the token using the Keycloak end-point
 ![image](https://github.com/user-attachments/assets/65f6ea89-c5a9-4fd9-948e-d284e2ce3dae)
 
 
-
+### Note: For me calling end-point with authorization bearer token did not work on the bask.http but of I call it from Postmen it is working.
