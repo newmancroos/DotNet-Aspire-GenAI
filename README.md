@@ -200,3 +200,74 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
 
 - With resource like Redis cache, database, .NEt aspire inject the environment variable with resource path. but with Service reference .Net aspire inject the service Url to the destination services. <br/>
 
+## Securing microservice using Keycloak
+Keycloak is an open-source Identity and Access Management (IAM) solution that provides authentication and authorization services for ASP.NET Core applications. It acts as an identity provider, allowing users to log in, manage their accounts, and access resources in your application. Keycloak is particularly useful for scenarios where you need single sign-on (SSO) and want to leverage the capabilities of OAuth 2.0 and OpenID Connect protocols. 
+
+### Authentication:
+Keycloak handles verifying user identities, ensuring that only authorized users can access your application. 
+
+### Authorization:
+Keycloak enforces access control, determining which users have permission to access specific resources or functionalities within your application. 
+
+### Single Sign-On (SSO):
+Users can log in once and access multiple applications using the same credentials, thanks to Keycloak's SSO capabilities. 
+
+### Identity Management:
+Keycloak provides tools for managing users, roles, groups, and other identity-related aspects of your application. 
+
+### OpenID Connect and OAuth 2.0 Compliant:
+Keycloak is built on these popular protocols, making it easy to integrate with many modern web applications. 
+<br/><br/>
+### <u>Benefits of Using Keycloak in ASP.NET Core:</u>
+
+### Simplified Security:
+By offloading authentication and authorization, you can focus on developing your application's core features, rather than managing security complexities. 
+
+### Scalability and Robustness:
+Keycloak is a mature and robust solution, capable of handling large numbers of users and applications. 
+
+### Centralized Management:
+Keycloak provides a central admin console for managing users, roles, and configurations for all of your applications. 
+
+### Social Login and User Federation:
+Keycloak supports various social login providers and user federation options, making it easier for users to log in and manage their accounts. 
+
+![image](https://github.com/user-attachments/assets/d86056c8-8be6-40a1-9214-dd9b6de656d4)
+
+![image](https://github.com/user-attachments/assets/70f474f4-4fbb-475a-b4ed-98e98bf4f164)
+
+
+### Configuraing Keycloak
+
+- First configuration is create Realm definition
+- Under Realm definition (eshop) we can create Client, Roles and Users
+- Create Client and give client name (eshop-clinet) and leave other setting as it is.
+- Create User 
+![image](https://github.com/user-attachments/assets/ea4e91d4-a836-455c-b87a-2a9249fa5a52)
+
+![image](https://github.com/user-attachments/assets/810aca19-b75c-4d2e-98a6-21201fdd5d8b)
+
+![image](https://github.com/user-attachments/assets/aa1cb62e-4a2f-4ea8-a395-1650a28d7d8d)
+
+Now we can get the token using the Keycloak end-point
+
+- Toekn End-point : http://your-Keycloak-server/realms/your-realm-name/protocol/openid-connect/token <br/>
+- Our End-point for token:  http://localhost:8080/realms/eshop/protocol/openid-connect/token <br/>
+- grant-type = password
+- client-id : eshop-client
+- scope = email openid
+- username= test
+- password = 1234
+
+- We can use Basket service basket.http debugging tool to get the token
+  ![image](https://github.com/user-attachments/assets/388adf3b-c9ba-4f87-b660-a2301a67aec5)
+  
+
+
+![image](https://github.com/user-attachments/assets/917b151a-e382-469a-912d-cdb2f8ecb715)
+
+  
+![image](https://github.com/user-attachments/assets/65f6ea89-c5a9-4fd9-948e-d284e2ce3dae)
+
+
+### Note: For me calling end-point with authorization bearer token did not work on the bask.http but of I call it from Postmen it is working.
