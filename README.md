@@ -251,13 +251,18 @@ Keycloak supports various social login providers and user federation options, ma
 
 Now we can get the token using the keyclock end-point
 
-- Toekn End-point : http://your-keyclock-server/realm/your-realm-name/protocol/openid-connect/token <br/>
-- Our End-point for token:  http://localhost:8080/realm/eshop/protocol/openid-connect/token <br/>
+- Toekn End-point : http://your-keyclock-server/realms/your-realm-name/protocol/openid-connect/token <br/>
+- Our End-point for token:  http://localhost:8080/realms/eshop/protocol/openid-connect/token <br/>
 - grant-type = password
 - client-id : eshop-client
 - scope = email openid
 - username= test
 - password = 1234
+
+- We can use Basket service basket.http debugging tool to get the token
+  ![image](https://github.com/user-attachments/assets/388adf3b-c9ba-4f87-b660-a2301a67aec5)
+  
+
 
 - POST request
   
