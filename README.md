@@ -236,3 +236,30 @@ Keycloak supports various social login providers and user federation options, ma
 
 ![image](https://github.com/user-attachments/assets/70f474f4-4fbb-475a-b4ed-98e98bf4f164)
 
+
+### Configuraing KeyClock
+
+- First configuration is create Realm definition
+- Under Realm definition (eshop) we can create Client, Roles and Users
+- Create Client and give client name (eshop-clinet) and leave other setting as it is.
+- Create User 
+![image](https://github.com/user-attachments/assets/ea4e91d4-a836-455c-b87a-2a9249fa5a52)
+
+![image](https://github.com/user-attachments/assets/810aca19-b75c-4d2e-98a6-21201fdd5d8b)
+
+![image](https://github.com/user-attachments/assets/aa1cb62e-4a2f-4ea8-a395-1650a28d7d8d)
+
+Now we can get the token using the keyclock end-point
+
+- Toekn End-point : https://your-keyclock-server/realm/your-realm-name/protocol/openid-connect/token <br/>
+- Our End-point for token:  https://localhost:8080/realm/eshop/protocol/openid-connect/token <br/>
+- grant-type = password
+- client-id : eshop-client
+- scope = email openid
+- username= test
+- password = 1234
+
+- POST request
+- 
+
+
