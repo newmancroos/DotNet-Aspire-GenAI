@@ -264,7 +264,8 @@ Now we can get the token using the Keycloak end-point
   
 
 
-- POST request
+![image](https://github.com/user-attachments/assets/917b151a-e382-469a-912d-cdb2f8ecb715)
+
   
 
 
