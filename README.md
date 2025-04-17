@@ -251,8 +251,8 @@ Keycloak supports various social login providers and user federation options, ma
 
 Now we can get the token using the keyclock end-point
 
-- Toekn End-point : https://your-keyclock-server/realm/your-realm-name/protocol/openid-connect/token <br/>
-- Our End-point for token:  https://localhost:8080/realm/eshop/protocol/openid-connect/token <br/>
+- Toekn End-point : http://your-keyclock-server/realm/your-realm-name/protocol/openid-connect/token <br/>
+- Our End-point for token:  http://localhost:8080/realm/eshop/protocol/openid-connect/token <br/>
 - grant-type = password
 - client-id : eshop-client
 - scope = email openid
@@ -260,6 +260,6 @@ Now we can get the token using the keyclock end-point
 - password = 1234
 
 - POST request
-- 
+  
 
 
