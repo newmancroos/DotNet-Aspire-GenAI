@@ -2,6 +2,7 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 
 //Backing Services
+//----------------
 var postgres = builder
     .AddPostgres("postgres")
     .WithPgAdmin()
@@ -29,7 +30,14 @@ var rabbitmq = builder
     .WithDataVolume()
     .WithLifetime(ContainerLifetime.Persistent);
 
+var keycloak = builder
+    .AddKeycloak("keycloak",8080)
+    .WithDataVolume()
+    .WithExternalHttpEndpoints()
+    .WithLifetime(ContainerLifetime.Persistent);
+
 //Projects
+//----------------
 var catalog = builder
     .AddProject<Projects.Catalog>("catalog")
     .WithReference(catalogDb)
@@ -46,8 +54,10 @@ builder
     .WithReference(cache)
     .WithReference(catalog)
     .WithReference(rabbitmq)
+    .WithReference(keycloak)
     .WaitFor(cache)
-    .WaitFor(rabbitmq);
+    .WaitFor(rabbitmq)
+    .WaitFor(keycloak);
 
 // This will inject environment variable to the service (here it is catalog) with the connection string to the database we created above.
 

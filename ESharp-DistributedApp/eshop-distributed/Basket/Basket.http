@@ -1,12 +1,15 @@
 @Basket_HostAddress = https://localhost:7215/basket
+@accessToken = eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBN3Zib2tTZDZ1VXFTQUw5ZVFaakdjU2VMQWxIc0VBQzZzUWQ3ZEk5TXFBIn0.eyJleHAiOjE3NDQ5MjI0NDIsImlhdCI6MTc0NDkyMjE0MiwianRpIjoiZThkMWE1ODEtYjEyMS00YTM2LThkNjUtYmE5NDhjZjRlYWI1IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9lc2hvcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIwNmJlMWQyZC1jZDBlLTRkNTgtOWJhMS01M2IwYzYwYjA5YmQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJlc2hvcC1jbGllbnQiLCJzaWQiOiIzZDFmYzA2ZC0yN2Q0LTRiZTgtYjM2Yi0wZDVhMWNkNDkxNWEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiZGVmYXVsdC1yb2xlcy1lc2hvcCJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6InRlc3QgdGVzdCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdCIsImZhbWlseV9uYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSJ9.PGSrJVxS8d4vLAc6NlTiOFp5raBHwl52bfuoS_aUJPa8f1NgoLil-BjMDqXAjH2fPNcReR3TAn1yppK6xD1gXeesgTDj6bMD5LI_8V8R3M3prkrrVf4o_vRJBW31495svi_mJ4CtmyTRX5Z6GhpAnXq9stRWmbxQfLwW58HzlMjd8UMvhKlg2Dztg9JijCzuK3Mvu8QyTobHThXDyp2ClFRF0jcKv4jVAZ0tY2VFjiEwgJ8m1sPjMD7w7jK-IfANa4X4-cYvtJrk6ZvPtzO29EenO24oXAnT8i8StgqTDSDPyI1jc2viuc6AhHOHjhtgkUriBzbOWLQz5WkdfAgckg
 
 GET {{Basket_HostAddress}}/swn
 Accept: application/json
+Azuthorization: Bearer {{accessToken}}
 
 ###
 
 POST {{Basket_HostAddress}}
 Content-Type: application/json
+Azuthorization: Bearer {{accessToken}}
 {
     "UserName": "swn",
     "Items": [
@@ -30,5 +33,10 @@ Content-Type: application/json
 ###
 DELETE {{Basket_HostAddress}}/swn
 Content-Type: application/json
-
+Azuthorization: Bearer {{accessToken}}
 ###
+
+POST http://localhost:8080/realms/eshop/protocol/openid-connect/token
+content-type: application/x-www-form-urlencoded
+
+grant_type=password&client_id=eshop-client&scope=email openid&username=test&password=1234
