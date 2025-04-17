@@ -200,7 +200,7 @@ In Service side we need to install relevent Aspire packages, so it uses the envi
 
 - With resource like Redis cache, database, .NEt aspire inject the environment variable with resource path. but with Service reference .Net aspire inject the service Url to the destination services. <br/>
 
-## Securing microservice using KeyClock
+## Securing microservice using Keycloak
 Keycloak is an open-source Identity and Access Management (IAM) solution that provides authentication and authorization services for ASP.NET Core applications. It acts as an identity provider, allowing users to log in, manage their accounts, and access resources in your application. Keycloak is particularly useful for scenarios where you need single sign-on (SSO) and want to leverage the capabilities of OAuth 2.0 and OpenID Connect protocols. 
 
 ### Authentication:
@@ -237,7 +237,7 @@ Keycloak supports various social login providers and user federation options, ma
 ![image](https://github.com/user-attachments/assets/70f474f4-4fbb-475a-b4ed-98e98bf4f164)
 
 
-### Configuraing KeyClock
+### Configuraing Keycloak
 
 - First configuration is create Realm definition
 - Under Realm definition (eshop) we can create Client, Roles and Users
@@ -249,9 +249,9 @@ Keycloak supports various social login providers and user federation options, ma
 
 ![image](https://github.com/user-attachments/assets/aa1cb62e-4a2f-4ea8-a395-1650a28d7d8d)
 
-Now we can get the token using the keyclock end-point
+Now we can get the token using the Keycloak end-point
 
-- Toekn End-point : http://your-keyclock-server/realms/your-realm-name/protocol/openid-connect/token <br/>
+- Toekn End-point : http://your-Keycloak-server/realms/your-realm-name/protocol/openid-connect/token <br/>
 - Our End-point for token:  http://localhost:8080/realms/eshop/protocol/openid-connect/token <br/>
 - grant-type = password
 - client-id : eshop-client
