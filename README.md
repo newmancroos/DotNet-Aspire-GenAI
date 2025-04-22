@@ -271,3 +271,6 @@ Now we can get the token using the Keycloak end-point
 
 
 ### Note: For me calling end-point with authorization bearer token did not work on the bask.http but of I call it from Postmen it is working.
+
+
+## Deploying Aspire applications to Azure Container App (ACA)
