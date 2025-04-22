@@ -49,7 +49,7 @@ var catalog = builder
 
 // Add projects and cloud-native backing services here
 
-builder
+var basket = builder
     .AddProject<Projects.Basket>("basket")
     .WithReference(cache)
     .WithReference(catalog)
@@ -59,9 +59,12 @@ builder
     .WaitFor(rabbitmq)
     .WaitFor(keycloak);
 
-// This will inject environment variable to the service (here it is catalog) with the connection string to the database we created above.
-
-// Add projects and cloud-native backing services here
-
+builder.AddProject<Projects.WebApp>("webapp")
+    .WithExternalHttpEndpoints()
+    .WithReference(catalog)
+    .WithReference(basket)
+    .WithReference(cache)
+    .WaitFor(catalog)
+    .WaitFor(basket);
 
 builder.Build().Run();
