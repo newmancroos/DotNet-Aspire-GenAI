@@ -274,3 +274,38 @@ Now we can get the token using the Keycloak end-point
 
 
 ## Deploying Aspire applications to Azure Container App (ACA)
+
+### What is Azure Container Apps?
+- Azure container Apps is Microsoft's managed container hosting for microservices
+- Simplifies running containers in a serverless fashion
+- Perfect for .Net aspire solutions needing easy scale & integrate logs
+
+### What is the Key benefits of Azure Container Apps
+- Automatic scaling and revision management
+- Dapr integration (optional) for sidecar patterns
+- ACA uses KEDA for event-based scaling for queue messages
+- Simple container-based deployment from the command line using "azd" command. Easy deployment from local development or CICD pipeline. No complicated Yaml or manual orchested config file.
+
+### Deploying a .NET Aspire project to ACA
+- Containerize each microservices automatically with .NET aspire
+- Just use Azure developer CLI and Azd commands to setup environment files
+- azd up to provision Azure resources
+- azd down to tear them down
+
+###  Detailed Azure command
+
+azd init 
+- Create .azure folder or config files for naming & region choices
+- optionally picks an existing subscription
+- Typically done once per solution
+
+azd up
+- This will build your .net aspire project containers locally or in the azure (Builds containers, pushes to Azure container Registry
+- Provision containers Apps environment, secrets and logs
+- Deploys each microservices in your .NET Aspire solution to the Azure container Apps
+
+azd Down
+- Frees up resource usage in your subscription
+- Removes container apps, registry, loggs and secrets
+- This keeps our Azure subscription and limit the useage so we'll not be billed
+- 
