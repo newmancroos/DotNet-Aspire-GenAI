@@ -308,4 +308,12 @@ azd Down
 - Frees up resource usage in your subscription
 - Removes container apps, registry, loggs and secrets
 - This keeps our Azure subscription and limit the useage so we'll not be billed
-- 
+
+<b>Notes:</b><br/>
+Data valume doesn;t work on Azure Container App. We know when we create docker container we use Valume that helps to save the data permanantly in the container eventhough we restart the container the data will be there.
+This feature doesn;t work on ACA.<br/>
+Especially Volumes don;t work woith Postgres database on ACA. It is an Azure storage limitation with how the volume is mounted and incompatibility with somer linux containers.<br/>
+
+![image](https://github.com/user-attachments/assets/17b12d7e-deb7-40e1-b7f1-a7e265fe904b)
+
+
