@@ -6,8 +6,9 @@ var builder = DistributedApplication.CreateBuilder(args);
 var postgres = builder
     .AddPostgres("postgres")
     .WithPgAdmin()
-    .WithDataVolume()
+    .WithDataVolume()  // Limitation of Azure storage. // Comment this line when deploy to azure
     .WithLifetime(ContainerLifetime.Persistent);
+
 
 //This will create a Postgres container with optional PgAdmin UI tool and a data volume for persistence. so eventhough we stop running the 
 //project the container will run and data will be persisted.
@@ -15,7 +16,7 @@ var postgres = builder
 var cache = builder
      .AddRedis("cache")
      .WithRedisInsight()
-    .WithDataVolume()
+    .WithDataVolume()  // Comment this line when deploy to azure
     .WithLifetime(ContainerLifetime.Persistent);
 
 
@@ -27,14 +28,25 @@ var catalogDb = postgres.AddDatabase("catalogdb");
 var rabbitmq = builder
     .AddRabbitMQ("rabbitmq")
     .WithManagementPlugin()
-    .WithDataVolume()
+    .WithDataVolume()  // Comment this line when deploy to azure
     .WithLifetime(ContainerLifetime.Persistent);
 
 var keycloak = builder
     .AddKeycloak("keycloak",8080)
-    .WithDataVolume()
-    .WithExternalHttpEndpoints()
+    .WithDataVolume()   // Comment this line when deploy to azure
+    //.WithExternalHttpEndpoints()  // Comment this line when deploy to azure
     .WithLifetime(ContainerLifetime.Persistent);
+
+// Data Valunes don't work on ACA for postgres so only add when running. This indicate it is locval environment or docker environment
+//// UnComment this line when deploy to azure
+//if (builder.ExecutionContext.IsRunMode)
+//{
+//    postgres.WithDataVolume();
+//    rabbitmq.WithDataVolume();
+//    keycloak.WithDataVolume();
+//    cache.WithDataVolume();
+//}
+
 
 //Projects
 //----------------
