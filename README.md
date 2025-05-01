@@ -330,4 +330,9 @@ Especially Volumes don;t work woith Postgres database on ACA. It is an Azure sto
   ![image](https://github.com/user-attachments/assets/ea81fac5-37b8-4bc6-b462-dc25b7963524)
   
 
-- 
+- Step6: Once we deploy, run and test we need to clean up the azure resources so that we can avoid charging.
+    <pre>
+         azd down
+    </pre>
+This will ask confirmation to delete all respources. select Y <br/>
+This will delete all resources uner resource group and resource group.
