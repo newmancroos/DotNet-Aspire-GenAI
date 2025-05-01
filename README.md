@@ -320,3 +320,14 @@ Especially Volumes don;t work woith Postgres database on ACA. It is an Azure sto
 ## Deploye Aspire application using azd command to Azure Container Application (ACA)
 
 - Step1 : Install Azd using <pre> winget install microsoft.azd</pre>
+- Step2: Check <pre>azd version</pre> to confirm the azd installation
+- Step3: <pre>azd auth login</pre> to login to azure portal
+- Stpe4: Goto Application root folder where the solution file exist and run <pre>azd init</pre> This will identify the project and ask to enter Environment name "myaspire"
+       End of stpe4, created  azure.yaml and next-setp.md files
+- Step5: Run azd up . In this step it will ask you to select Azure subscroiption, we have only one so just enter. and Location "East Us 2".
+    It will automatically create "rg-myaspire" resource group and all resource under it.
+
+  ![image](https://github.com/user-attachments/assets/ea81fac5-37b8-4bc6-b462-dc25b7963524)
+  
+
+- 
