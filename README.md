@@ -317,3 +317,6 @@ Especially Volumes don;t work woith Postgres database on ACA. It is an Azure sto
 ![image](https://github.com/user-attachments/assets/17b12d7e-deb7-40e1-b7f1-a7e265fe904b)
 
 
+## Deploye Aspire application using azd command to Azure Container Application (ACA)
+
+- Step1 : Install Azd using <pre> winget install microsoft.azd</pre>
