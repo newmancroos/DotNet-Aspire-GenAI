@@ -271,3 +271,68 @@ Now we can get the token using the Keycloak end-point
 
 
 ### Note: For me calling end-point with authorization bearer token did not work on the bask.http but of I call it from Postmen it is working.
+
+
+## Deploying Aspire applications to Azure Container App (ACA)
+
+### What is Azure Container Apps?
+- Azure container Apps is Microsoft's managed container hosting for microservices
+- Simplifies running containers in a serverless fashion
+- Perfect for .Net aspire solutions needing easy scale & integrate logs
+
+### What is the Key benefits of Azure Container Apps
+- Automatic scaling and revision management
+- Dapr integration (optional) for sidecar patterns
+- ACA uses KEDA for event-based scaling for queue messages
+- Simple container-based deployment from the command line using "azd" command. Easy deployment from local development or CICD pipeline. No complicated Yaml or manual orchested config file.
+
+### Deploying a .NET Aspire project to ACA
+- Containerize each microservices automatically with .NET aspire
+- Just use Azure developer CLI and Azd commands to setup environment files
+- azd up to provision Azure resources
+- azd down to tear them down
+
+###  Detailed Azure command
+
+azd init 
+- Create .azure folder or config files for naming & region choices
+- optionally picks an existing subscription
+- Typically done once per solution
+
+azd up
+- This will build your .net aspire project containers locally or in the azure (Builds containers, pushes to Azure container Registry
+- Provision containers Apps environment, secrets and logs
+- Deploys each microservices in your .NET Aspire solution to the Azure container Apps
+
+azd Down
+- Frees up resource usage in your subscription
+- Removes container apps, registry, loggs and secrets
+- This keeps our Azure subscription and limit the useage so we'll not be billed
+
+<b>Notes:</b><br/>
+Data valume doesn;t work on Azure Container App. We know when we create docker container we use Valume that helps to save the data permanantly in the container eventhough we restart the container the data will be there.
+This feature doesn;t work on ACA.<br/>
+Especially Volumes don;t work woith Postgres database on ACA. It is an Azure storage limitation with how the volume is mounted and incompatibility with somer linux containers.<br/>
+
+![image](https://github.com/user-attachments/assets/17b12d7e-deb7-40e1-b7f1-a7e265fe904b)
+
+
+## Deploye Aspire application using azd command to Azure Container Application (ACA)
+
+- Step1 : Install Azd using <pre> winget install microsoft.azd</pre>
+- Step2: Check <pre>azd version</pre> to confirm the azd installation
+- Step3: <pre>azd auth login</pre> to login to azure portal
+- Stpe4: Goto Application root folder where the solution file exist and run <pre>azd init</pre> This will identify the project and ask to enter Environment name "myaspire"
+       End of stpe4, created  azure.yaml and next-setp.md files
+- Step5: Run azd up . In this step it will ask you to select Azure subscroiption, we have only one so just enter. and Location "East Us 2".
+    It will automatically create "rg-myaspire" resource group and all resource under it.
+
+  ![image](https://github.com/user-attachments/assets/ea81fac5-37b8-4bc6-b462-dc25b7963524)
+  
+
+- Step6: Once we deploy, run and test we need to clean up the azure resources so that we can avoid charging.
+    <pre>
+         azd down
+    </pre>
+This will ask confirmation to delete all respources. select Y <br/>
+This will delete all resources uner resource group and resource group.
