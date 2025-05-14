@@ -371,3 +371,7 @@ Llama models can be used in various applications, including:<br/>
 
 In essence: Ollama provides a way to easily run Llama models (or other supported LLMs) on your local machine, making it easier to experiment with and integrate these models into your own applications without relying on cloud infrastructure. 
 <br/>
+
+![image](https://github.com/user-attachments/assets/88d40111-1359-4d38-992c-e17995f83266)
+
+
