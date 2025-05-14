@@ -356,7 +356,7 @@ Simplified Model Management: Provides a user-friendly way to download, manage, a
 Open Source: Ollama is an open-source project, allowing for community contributions and customization. <br/><br/>
 Under the Hood:<br/>
 Ollama often uses llama.cpp, a C++ implementation, to handle the actual inference and generation of text from the LLMs. <br/><br/>
-Llama:<br/>
+<b>Llama:</b><br/>
 <u>Definition:</u><br/>
 Llama is a family of open-source LLMs developed by Meta AI. These models are designed for various natural language processing tasks, such as text generation, translation, and question answering.<br/><br/>
 Types of Llama Models:<br/>
