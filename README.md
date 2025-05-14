@@ -344,29 +344,30 @@ This will delete all resources uner resource group and resource group.
 What is Ollama and LLama?
 
 Ollama is a plateform that simplifies the process of running Large Language Model (LLM) locally on your machine. While LLama is the family of open source LLMs developed by Meta. Think of Ollama as a tool to run Llama models, making them more accessible for local use.
-<pre>
-     Ollama:
-Definition:
-Ollama is a tool designed to run LLMs locally, providing a user-friendly interface for downloading, managing, and interacting with these models. 
-Functionality:
-It simplifies the process of setting up and running LLMs by handling tasks like model downloads, managing the environment, and providing an API for interacting with the model. 
-Key Features:
+<br/>
+<b>Ollama:</b> <br/>
+<u>Definition:</u> <br/>
+Ollama is a tool designed to run LLMs locally, providing a user-friendly interface for downloading, managing, and interacting with these models. <br/><br/>
+Functionality:<br/>
+It simplifies the process of setting up and running LLMs by handling tasks like model downloads, managing the environment, and providing an API for interacting with the model. <br/><br/>
+Key Features:<br/>
 Local Execution: Allows users to run LLMs on their own computers, without relying on cloud services. 
 Simplified Model Management: Provides a user-friendly way to download, manage, and update different LLMs. 
-Open Source: Ollama is an open-source project, allowing for community contributions and customization. 
-Under the Hood:
-Ollama often uses llama.cpp, a C++ implementation, to handle the actual inference and generation of text from the LLMs. 
-Llama:
-Definition:
-Llama is a family of open-source LLMs developed by Meta AI. These models are designed for various natural language processing tasks, such as text generation, translation, and question answering.
-Types of Llama Models:
-Llama models come in different sizes (e.g., 7B, 13B, 65B parameters) and with different training approaches (e.g., foundation models, instruction-tuned models).
-Accessibility:
-Llama models are made available to researchers and developers under a license that promotes responsible AI practices.
-Use Cases:
-Llama models can be used in various applications, including:
-Chatbots and conversational AI.
-Text summarization and generation.
-Code generation. 
+Open Source: Ollama is an open-source project, allowing for community contributions and customization. <br/><br/>
+Under the Hood:<br/>
+Ollama often uses llama.cpp, a C++ implementation, to handle the actual inference and generation of text from the LLMs. <br/><br/>
+Llama:<br/>
+<u>Definition:</u><br/>
+Llama is a family of open-source LLMs developed by Meta AI. These models are designed for various natural language processing tasks, such as text generation, translation, and question answering.<br/><br/>
+Types of Llama Models:<br/>
+Llama models come in different sizes (e.g., 7B, 13B, 65B parameters) and with different training approaches (e.g., foundation models, instruction-tuned models).<br/><br/>
+Accessibility:<br/>
+Llama models are made available to researchers and developers under a license that promotes responsible AI practices.<br/><br/>
+Use Cases:<br/>
+Llama models can be used in various applications, including:<br/>
+- Chatbots and conversational AI.
+- Text summarization and generation.
+- Code generation. 
+
 In essence: Ollama provides a way to easily run Llama models (or other supported LLMs) on your local machine, making it easier to experiment with and integrate these models into your own applications without relying on cloud infrastructure. 
-</pre>
+<br/>
