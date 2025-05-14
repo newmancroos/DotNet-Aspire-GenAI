@@ -375,3 +375,7 @@ In essence: Ollama provides a way to easily run Llama models (or other supported
 ![image](https://github.com/user-attachments/assets/88d40111-1359-4d38-992c-e17995f83266)
 
 
+![image](https://github.com/user-attachments/assets/ee80689a-0f5c-4b94-988d-866f484ffe0f)
+
+This is how we register our OLLama container and Llama, this will download Ollama container and then install Llama 3.2 model inside of the Ollama container.
+
