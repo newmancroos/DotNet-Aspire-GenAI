@@ -388,4 +388,4 @@ When we use Microsoft.Extension.AI.Abstractions, which will communicate various 
 
 ![image](https://github.com/user-attachments/assets/520a10bb-f18a-4c6b-9ed7-9efca721e5cc)
 
-
+<br/>
