@@ -377,5 +377,10 @@ In essence: Ollama provides a way to easily run Llama models (or other supported
 
 ![image](https://github.com/user-attachments/assets/ee80689a-0f5c-4b94-988d-866f484ffe0f)
 
-This is how we register our OLLama container and Llama, this will download Ollama container and then install Llama 3.2 model inside of the Ollama container.
+This is how we register our OLLama container and Llama, this will download Ollama container and then install Llama 3.2 model inside of the Ollama container. <br/>
+
+Ollama, Lamma with Ollama's open web UI we can  easily implement a AI search functionality, but it is Aspire side, we need to implement it in the Web api for that we use Microsoft.Extension.AI and Microsoft.Extension.AI.Abstractions, thease a abstract layer that communicate with Ollama/Lamma. 
+
+![image](https://github.com/user-attachments/assets/56473952-f07e-4198-a635-a85aa29e1709)
+
 
