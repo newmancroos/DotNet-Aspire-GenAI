@@ -384,3 +384,8 @@ Ollama, Lamma with Ollama's open web UI we can  easily implement a AI search fun
 ![image](https://github.com/user-attachments/assets/56473952-f07e-4198-a635-a85aa29e1709)
 
 
+When we use Microsoft.Extension.AI.Abstractions, which will communicate various LLM Clients and AI services such as Semantic Kernal, Open AI, LLM Communitoity Packages, Azure AI interface, Ollama and Github Models. We can now use Ollama for local development and then without changing anuy code we can change it to use Azure Open Ai.
+
+![image](https://github.com/user-attachments/assets/520a10bb-f18a-4c6b-9ed7-9efca721e5cc)
+
+
