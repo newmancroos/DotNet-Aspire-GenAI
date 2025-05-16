@@ -394,7 +394,7 @@ When we use Microsoft.Extension.AI.Abstractions, which will communicate various 
 ## Semantic Product Search with Vector Embedding and Vector DB
 
  ### What is a Vector Database?
- A vector database is a specialized database that stores and manages data represented as high-dimensional vectors (numerical representations). It's designed for efficient similarity searches, allowing you to find data points that are semantically similar to a given query vector. <br/>
+ A vector database is a specialized database that stores and manages data represented as high-dimensional vectors (numerical representations). It's designed for efficient similarity searches, allowing you to find data points that are semantically similar to a given query vector. Veactor are numerical representation that capture the semantic meaning of data.<br/>
 
 <b> Vector Embeddings:</b><br/>
 Unstructured data like text, images, or audio is first converted into numerical vectors (embeddings) that capture its semantic meaning. <br/><br/>
@@ -410,3 +410,7 @@ Vector databases are widely used in applications like: <br/>
 <b>Recommender Systems:</b> Suggesting similar products, movies, or music based on user preferences.<br/> 
 <b>Image and Text Retrieval:</b> Searching for images or text that match a given query. <br/>
 <b>Retrieval-Augmented Generation (RAG):</b> Improving large language model (LLM) responses by providing them with relevant context from external data. <br/>
+
+
+![image](https://github.com/user-attachments/assets/ffb09353-d0bf-4bf1-8dbd-fb447a63bff0)
+
