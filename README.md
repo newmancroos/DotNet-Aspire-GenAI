@@ -336,3 +336,58 @@ Especially Volumes don;t work woith Postgres database on ACA. It is an Azure sto
     </pre>
 This will ask confirmation to delete all respources. select Y <br/>
 This will delete all resources uner resource group and resource group.
+
+
+
+## GEN AI Symantic Searach
+
+What is Ollama and LLama?
+
+Ollama is a plateform that simplifies the process of running Large Language Model (LLM) locally on your machine. While LLama is the family of open source LLMs developed by Meta. Think of Ollama as a tool to run Llama models, making them more accessible for local use.
+<br/>
+<b>Ollama:</b> <br/>
+<u>Definition:</u> <br/>
+Ollama is a tool designed to run LLMs locally, providing a user-friendly interface for downloading, managing, and interacting with these models. <br/><br/>
+Functionality:<br/>
+It simplifies the process of setting up and running LLMs by handling tasks like model downloads, managing the environment, and providing an API for interacting with the model. <br/><br/>
+Key Features:<br/>
+Local Execution: Allows users to run LLMs on their own computers, without relying on cloud services. 
+Simplified Model Management: Provides a user-friendly way to download, manage, and update different LLMs. 
+Open Source: Ollama is an open-source project, allowing for community contributions and customization. <br/><br/>
+Under the Hood:<br/>
+Ollama often uses llama.cpp, a C++ implementation, to handle the actual inference and generation of text from the LLMs. <br/><br/>
+<b>Llama:</b><br/>
+<u>Definition:</u><br/>
+Llama is a family of open-source LLMs developed by Meta AI. These models are designed for various natural language processing tasks, such as text generation, translation, and question answering.<br/><br/>
+Types of Llama Models:<br/>
+Llama models come in different sizes (e.g., 7B, 13B, 65B parameters) and with different training approaches (e.g., foundation models, instruction-tuned models).<br/><br/>
+Accessibility:<br/>
+Llama models are made available to researchers and developers under a license that promotes responsible AI practices.<br/><br/>
+Use Cases:<br/>
+Llama models can be used in various applications, including:<br/>
+- Chatbots and conversational AI.
+- Text summarization and generation.
+- Code generation. 
+
+In essence: Ollama provides a way to easily run Llama models (or other supported LLMs) on your local machine, making it easier to experiment with and integrate these models into your own applications without relying on cloud infrastructure. 
+<br/>
+
+![image](https://github.com/user-attachments/assets/88d40111-1359-4d38-992c-e17995f83266)
+
+
+![image](https://github.com/user-attachments/assets/ee80689a-0f5c-4b94-988d-866f484ffe0f)
+
+This is how we register our OLLama container and Llama, this will download Ollama container and then install Llama 3.2 model inside of the Ollama container. <br/>
+
+Ollama, Lamma with Ollama's open web UI we can  easily implement a AI search functionality, but it is Aspire side, we need to implement it in the Web api for that we use Microsoft.Extension.AI and Microsoft.Extension.AI.Abstractions, thease a abstract layer that communicate with Ollama/Lamma. 
+
+![image](https://github.com/user-attachments/assets/56473952-f07e-4198-a635-a85aa29e1709)
+
+
+When we use Microsoft.Extension.AI.Abstractions, which will communicate various LLM Clients and AI services such as Semantic Kernal, Open AI, LLM Communitoity Packages, Azure AI interface, Ollama and Github Models. We can now use Ollama for local development and then without changing anuy code we can change it to use Azure Open Ai.
+
+![image](https://github.com/user-attachments/assets/520a10bb-f18a-4c6b-9ed7-9efca721e5cc)
+
+![image](https://github.com/user-attachments/assets/eb763cb2-c12f-45d9-9c5f-86da6ce1898a)
+
+
