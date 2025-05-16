@@ -48,14 +48,24 @@ var keycloak = builder
 //}
 
 
+var ollama = builder
+    .AddOllama("ollama", 11434)
+    .WithDataVolume()  // Comment this line when deploy to azure
+    .WithLifetime(ContainerLifetime.Persistent)
+    .WithOpenWebUI();
+
+var llama = ollama.AddModel("llama3.2");
+
 //Projects
 //----------------
 var catalog = builder
     .AddProject<Projects.Catalog>("catalog")
     .WithReference(catalogDb)
     .WithReference(rabbitmq)
+    .WithReference(llama)
     .WaitFor(catalogDb)
-    .WaitFor(rabbitmq);
+    .WaitFor(rabbitmq)
+    .WaitFor(llama);
 
 // This will inject environment variable to the service (here it is catalog) with the connection string to the database we created above.
 
