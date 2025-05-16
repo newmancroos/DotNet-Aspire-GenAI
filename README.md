@@ -414,3 +414,5 @@ Vector databases are widely used in applications like: <br/>
 
 ![image](https://github.com/user-attachments/assets/ffb09353-d0bf-4bf1-8dbd-fb447a63bff0)
 
+![image](https://github.com/user-attachments/assets/60967843-8d26-422e-8552-c0b68c403613)
+
