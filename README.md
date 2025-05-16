@@ -406,7 +406,7 @@ These databases are optimized to handle large amounts of data in high-dimensiona
 <b>Applications:</b><br/>
 Vector databases are widely used in applications like: <br/>
 
-<b>Semantic Search:<b> Finding documents or content that are semantically related to a query. <br/>
+<b>Semantic Search:</b> Finding documents or content that are semantically related to a query. <br/>
 <b>Recommender Systems:</b> Suggesting similar products, movies, or music based on user preferences.<br/> 
 <b>Image and Text Retrieval:</b> Searching for images or text that match a given query. <br/>
 <b>Retrieval-Augmented Generation (RAG):</b> Improving large language model (LLM) responses by providing them with relevant context from external data. <br/>
