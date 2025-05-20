@@ -419,3 +419,20 @@ Vector databases are widely used in applications like: <br/>
 
 ### What is a Vector?
 A vector is a methematical object that has both Mahnitude and direction, represented as a list of numbers: [1.2,3.4,-0.8]. Vectors are used to represent complex data in a way that AI models can process, nunbericalsummaries of information. Instead of saying "It's round, orange andsweet"  encode these feature numbercally in a vector : [roundess:0.9, color:0.8, sweetness: o.7]
+
+### What is Vector Embeddings?
+
+Dense numberical representations of data, capture the sematic meaning of text, image, audio or other data type.
+
+ Step1 :Input Data -->  Start with raw data like a sentance, an image or a sound file <br/>
+ Step2 : Use an AI Embedding Model --> Pass the data through an AI model, like a Trasformer model <br/>
+ Step3 : Outpur Embedding  --> Transfors the input into a vecor embedding list of numbers <br/>
+
+ ![image](https://github.com/user-attachments/assets/aae0c67b-df16-4edb-b550-ebf0e830d604)
+
+ ![image](https://github.com/user-attachments/assets/33dc6bf6-6cec-4c82-9bc7-b909f12245ee)
+
+ ![image](https://github.com/user-attachments/assets/90a5fca4-56ba-4551-b75e-c75c45dabfe7)
+ 
+
+
