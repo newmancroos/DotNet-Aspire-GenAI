@@ -416,3 +416,6 @@ Vector databases are widely used in applications like: <br/>
 
 ![image](https://github.com/user-attachments/assets/60967843-8d26-422e-8552-c0b68c403613)
 
+
+### What is a Vector?
+A vector is a methematical object that has both Mahnitude and direction, represented as a list of numbers: [1.2,3.4,-0.8]. Vectors are used to represent complex data in a way that AI models can process, nunbericalsummaries of information. Instead of saying "It's round, orange andsweet"  encode these feature numbercally in a vector : [roundess:0.9, color:0.8, sweetness: o.7]
