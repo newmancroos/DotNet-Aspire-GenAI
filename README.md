@@ -435,4 +435,12 @@ Dense numberical representations of data, capture the sematic meaning of text, i
  ![image](https://github.com/user-attachments/assets/90a5fca4-56ba-4551-b75e-c75c45dabfe7)
  
 
+![image](https://github.com/user-attachments/assets/f076397f-6d12-4cc7-abb0-8772b5026d90)
+
+![image](https://github.com/user-attachments/assets/85f84459-ea0f-4646-821c-da1320785fae)
+
+![image](https://github.com/user-attachments/assets/3732b1bd-a20c-4a21-8e56-5e12f6a2ff67)
+
+
+
 
